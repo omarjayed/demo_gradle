@@ -23,16 +23,18 @@ dependencies {
 }
 
 def profile = project.hasProperty('profile') ? project.getProperty('profile') : 'dev'
-println "Building with profile: ${profile}"
+println("Building with profile: ${profile}")
 
 if (profile == 'prod') {
-    println "Prod mode enabled."
+    println("Prod mode enabled.")
     // an example of prod only dependency
     // dependencies {
     //        runtimeOnly 'some-dependency'
     // }
-} else if (profile == 'test') {
-    println "Tester mode enabled"
+} else if (profile == 'dev') {
+    println("DEv mode enabled")
+} else {
+    println("Not a real profile")
 }
 
 test {
@@ -47,14 +49,13 @@ test {
 }
 
 tasks.register('printBuildInfo') {
-    group = "Help"
     description = "Prints custom build info"
     doLast {
-        println "Project anme: ${project.name}"
-        println "Versoin: ${project.version}"
-        println "Gradle version: ${gradle.gradleVersion}"
-        println "Java version: ${System.getProperty('java.version')}"
-        println "Active profile : ${profile}"
+        println("Project anme: ${project.name}")
+        println("Versoin: ${project.version}")
+        println("Gradle version: ${gradle.gradleVersion}")
+        println("Java version: ${System.getProperty('java.version')}")
+        println("Active profile : ${profile}")
     }
 }
 
