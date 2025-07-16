@@ -1,0 +1,14 @@
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+runConfigurations/
+
+*.log
+
+.gradle/
+build/
+gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+gradle-app.setting
