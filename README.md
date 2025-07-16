@@ -18,7 +18,7 @@ docker-compose up -d
 
 ### Run custom gradle tasks
 #### To insert the profile to build the project with
-/gradlew -Pprofile=insert_profile_name
+./gradlew -Pprofile=insert_profile_name
 
 #### To print the buildinfo
-/gradlew printBuildInfo
+./gradlew printBuildInfo
